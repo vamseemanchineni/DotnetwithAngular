@@ -23,6 +23,7 @@ namespace API.Extensions
             services.AddScoped<IPhotoService, PhotoSevice>();
             services.AddScoped<LogUserActivity>();
             services.AddScoped<ILikesRepository, LikesRepository>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
             return services;
         }
     }
