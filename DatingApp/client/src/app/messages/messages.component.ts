@@ -10,7 +10,7 @@ import { Pagination } from '../_models/pagination';
 })
 export class MessagesComponent implements OnInit {
 
-  messages? : Message[];
+  messages?: Message[];
   pagination? : Pagination;
   container = 'Unread';
   pageNumber =1;
