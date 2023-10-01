@@ -1,0 +1,23 @@
+# fly.toml app configuration file generated for vamsee-dating-app on 2023-10-01T14:45:01+05:30
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "vamsee-dating-app"
+primary_region = "hkg"
+
+[build]
+  image = "vamsee20/datingapp"
+
+[ENV]
+ASPNETCORE_URLS="http://+:8080"
+CloudinarySettings__CloudName="dbkknbzvw"
+CloudinarySettings__ApiKey="148346778831435"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
